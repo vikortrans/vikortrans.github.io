@@ -1,28 +1,78 @@
+
 <!DOCTYPE html>
 <html lang="vi">
-<head><!-- Start Wingify Async V3.0 SmartCode -->
-<link rel="preconnect" href="https://edge.wingify.net"/>
-<script type="text/javascript">
-window._wingify_code || (function() {        
-    var account_id = 1300686,
-        version = 3.0,
-        settings_tolerance = 2000,
-        hide_element = 'body',
-        hide_element_style =
-        'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;transition:none !important';
-    /* DO NOT EDIT BELOW THIS LINE */
-    var n=window,i=document;if(-1<i.URL.indexOf('__wingify_disable__')||n._wingify_code)return;var t=!1,r=i.currentScript,nonce=r&&r.nonce,e={sT:settings_tolerance,hES:hide_element_style,hE:hide_element};try{e=Object.assign(e,JSON.parse(localStorage.getItem('_wingify_'+account_id+'_config')))}catch(e){}var code={script:r,nonce:nonce,settings_tolerance:function(){return e.sT},hide_element:function(){return performance.getEntriesByName('first-contentful-paint')[0]?'':e.hE},hide_element_style:function(){return'{'+e.hES+'}'},getVersion:function(){return version},finish:function(){var e;!t&&(t=!0,e=i.getElementById('_vis_opt_path_hides'))&&e.parentNode.removeChild(e)},finished:function(){return t},addScript:function(e){var t=i.createElement('script');t.src=e,nonce&&t.setAttribute('nonce',nonce),t.fetchPriority='high',i.head.appendChild(t)},init:function(){n._settings_timer=setTimeout(function(){code.finish()},this.settings_tolerance());var e,t=this.hide_element();t&&((e=i.createElement('style')).id='_vis_opt_path_hides',nonce&&e.setAttribute('nonce',nonce),e.textContent=t+this.hide_element_style(),i.head.appendChild(e)),this.addScript('https://edge.wingify.net/tag/'+account_id+'.js')}};n._wingify_code=code;code.init();})();
-</script> 
-<!--End Wingify Async SmartCode -->
+<head>
+    <!-- Start Wingify Async V3.0 SmartCode -->
+    <link rel="preconnect" href="https://edge.wingify.net"/>
+    <script type="text/javascript">
+    window._wingify_code || (function() {
+        var account_id = 1300686,
+            version = 3.0,
+            settings_tolerance = 2000,
+            hide_element = 'body',
+            hide_element_style =
+            'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;transition:none !important';
+
+        var n=window,i=document;
+        if(-1<i.URL.indexOf('__wingify_disable__')||n._wingify_code)return;
+        var t=!1,r=i.currentScript,nonce=r&&r.nonce,e={
+            sT:settings_tolerance,hES:hide_element_style,hE:hide_element
+        };
+        try {
+            e=Object.assign(e,JSON.parse(localStorage.getItem('_wingify_'+account_id+'_config')))
+        } catch(e) {}
+
+        var code={
+            script:r,
+            nonce:nonce,
+            settings_tolerance:function(){return e.sT},
+            hide_element:function(){
+                return performance.getEntriesByName('first-contentful-paint')[0]?'':e.hE
+            },
+            hide_element_style:function(){return'{'+e.hES+'}'},
+            getVersion:function(){return version},
+            finish:function(){
+                var e;
+                !t&&(t=!0,e=i.getElementById('_vis_opt_path_hides'))&&e.parentNode.removeChild(e)
+            },
+            finished:function(){return t},
+            addScript:function(e){
+                var t=i.createElement('script');
+                t.src=e;
+                nonce&&t.setAttribute('nonce',nonce);
+                t.fetchPriority='high';
+                i.head.appendChild(t)
+            },
+            init:function(){
+                n._settings_timer=setTimeout(function(){code.finish()},this.settings_tolerance());
+                var e,t=this.hide_element();
+                t&&((e=i.createElement('style')).id='_vis_opt_path_hides',
+                nonce&&e.setAttribute('nonce',nonce),
+                e.textContent=t+this.hide_element_style(),
+                i.head.appendChild(e));
+                this.addScript('https://edge.wingify.net/tag/'+account_id+'.js')
+            }
+        };
+        n._wingify_code=code;
+        code.init();
+    })();
+    </script>
+    <!-- End Wingify SmartCode -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pocket Shopper - E-commerce</title>
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         /* Header Style */
@@ -77,7 +127,7 @@ window._wingify_code || (function() {
 
         /* Navigation Bar */
         .nav-bar {
-            background-color: #311b58; /* Tông màu tím đậm giống ảnh */
+            background-color: #311b58;
             padding: 10px 20px;
             display: flex;
             justify-content: center;
@@ -189,8 +239,96 @@ window._wingify_code || (function() {
             align-items: center;
             justify-content: center;
         }
+
+        /* NEW: Details Button */
+        .details-button {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 13px 30px;
+            background-color: #311b58;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .details-button:hover {
+            background-color: #5a2e7c;
+            transform: translateY(-2px);
+        }
+
+        /* NEW: Details Section */
+        .details-section {
+            padding: 70px 20px;
+            text-align: center;
+            background-color: #f7f5fa;
+            min-height: 300px;
+        }
+
+        .details-section h2 {
+            color: #311b58;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .details-section p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 30px;
+            color: #311b58;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 12px;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .search-box {
+                width: 160px;
+            }
+
+            .user-actions {
+                gap: 10px;
+                font-size: 12px;
+            }
+
+            .hero-banner {
+                height: 280px;
+            }
+
+            .hero-images {
+                gap: 10px;
+            }
+
+            .hero-images img {
+                height: 150px;
+                max-width: 28%;
+            }
+
+            .hero-arrow.left { left: 5px; }
+            .hero-arrow.right { right: 5px; }
+
+            .category-grid {
+                gap: 25px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -199,9 +337,11 @@ window._wingify_code || (function() {
             <input type="text" placeholder="Search">
             <span>🔍</span>
         </div>
+
         <div class="logo">
             <span>🛍️</span> Pocket Shopper
         </div>
+
         <div class="user-actions">
             <span>💛 0</span>
             <span>🛒 0</span>
@@ -226,44 +366,74 @@ window._wingify_code || (function() {
         <a href="#">Mens Shirts</a>
     </nav>
 
-    <!-- Hero Banner (Túi xách & Phụ kiện như hình mẫu) -->
+    <!-- Hero Banner -->
     <section class="hero-banner">
         <button class="hero-arrow left">&lt;</button>
+
         <div class="hero-images">
-            <!-- Hình ảnh minh họa túi xách cao cấp -->
             <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400" alt="Túi xách xanh dương">
             <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400" alt="Túi xách xanh ngọc">
             <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?w=300" alt="Ví da phụ kiện">
         </div>
+
         <button class="hero-arrow right">&gt;</button>
     </section>
 
     <!-- Categories Section -->
     <section class="categories-section">
         <h2>Store's Categories</h2>
+
         <div class="category-grid">
             <div class="category-item">
                 <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=200" alt="Kitchen Accessories">
                 <p>Kitchen Accessories</p>
             </div>
+
             <div class="category-item">
                 <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=200" alt="Mens Watches">
                 <p>Mens Watches</p>
             </div>
+
             <div class="category-item">
                 <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=200" alt="Laptops">
                 <p>Laptops</p>
             </div>
+
             <div class="category-item">
                 <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=200" alt="Tops">
-                <p>Tops</p> giao hàng
+                <p>Tops</p>
             </div>
+
             <div class="category-item">
                 <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=200" alt="Womens Watches">
                 <p>Womens Watches</p>
             </div>
+
             <button class="next-cat-btn">&gt;</button>
         </div>
+
+        <!-- NEW: Button -->
+        <button class="details-button"
+                onclick="document.getElementById('details').scrollIntoView({behavior: 'smooth'});">
+            자세히 보기 ↓
+        </button>
+    </section>
+
+    <!-- NEW: Content shown after clicking the button -->
+    <section class="details-section" id="details">
+        <h2>Discover More at Pocket Shopper</h2>
+
+        <p>
+            Welcome to Pocket Shopper! Explore our wide range of products,
+            discover your favorite categories, and find products that match
+            your everyday needs. We are here to make your online shopping
+            experience simple and convenient.
+        </p>
+
+        <a href="#" class="back-to-top"
+           onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            ↑ Back to Top
+        </a>
     </section>
 
 </body>
